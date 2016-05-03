@@ -1,7 +1,22 @@
 # DataStax Enterprise Exercise
-#### Ajish D. George May 01, 2016
 
-### Q4
+
+### Q1: Load up at least a one node cluster of DSE
+
+Adapted a vagrant-ansible recipe for spinning up a three node cluster plus opscenter.
+
+See vagrant-ansible-cassandra and setup_cluster.sh for the broad strokes
+-- tweaks to config not shown
+
+### Q2: Create the base data bodel using the given table defn
+
+See implementation of FlightModel class in airtraffic.py
+
+### Q3: Load source data from csv into flights table using driver based application
+
+See load_csv function in airtraffic.py
+
+### Q4: Create tables to answer these questions
 
 a. Build a query table to list all flights leaving a particular airport sorted by time.
 
@@ -12,7 +27,7 @@ b. List the carrier, origin, and destination airport for a flight based on 10 mi
 See definition of the Airtime class and the load_airtime function in airtraffic.py
 
 
-### Q5: Queries
+### Q5: Answer these questions using DSE and the created tables
 
 a. How many flights originated from the 'HNL' airport code on 2012-01-25?
 ```
