@@ -176,11 +176,13 @@ def run_queries():
     f23 = f23.most_common(2)
     print("Airport with most flights %s - %d" % f23[0])
 
+
+
 # syntax for reusing session is flaky, just shutdown the cluster and reconnect with the object mapper
 connection.setup(HOSTS, "cqlengine", protocol_version=3)
-# load_csv()
-#sync_table(Departures)
-# load_departures()
-#sync_table(Airtime)
-#load_airtime()
+load_csv()
+sync_table(Departures)
+load_departures()
+sync_table(Airtime)
+load_airtime()
 run_queries()
